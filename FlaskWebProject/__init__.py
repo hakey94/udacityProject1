@@ -15,6 +15,12 @@ app.logger.setLevel(logging.WARNING)
 streamHandler = logging.StreamHandler()
 streamHandler.setLevel(logging.WARNING)
 app.logger.addHandler(streamHandler)
+
+app.logger.setLevel(logging.INFO)
+streamHandler = logging.StreamHandler()
+streamHandler.setLevel(logging.INFO)
+app.logger.addHandler(streamHandler)
+
 Session(app)
 db = SQLAlchemy(app)
 login = LoginManager(app)
