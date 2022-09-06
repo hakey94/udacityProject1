@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'hakey-helloworld'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_7C603F51C306448AA6CB390CE5754178 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_80075EB97F5149A79227F34C3E2459F8 }}
