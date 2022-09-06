@@ -4,7 +4,6 @@ Routes and views for the flask application.
 
 from cmath import log
 from datetime import datetime
-import logging
 from flask import render_template, flash, redirect, request, session, url_for
 from werkzeug.urls import url_parse
 from config import Config
@@ -72,7 +71,7 @@ def login():
             app.logger.warning('Invalid login attempt')
             return redirect(url_for('login'))
         login_user(user, remember=form.remember_me.data)
-        logging.info('admin logged in successfully')
+        app.logger.info('admin logged in successfully')
         next_page = request.args.get('next')
         if not next_page or url_parse(next_page).netloc != '':
             next_page = url_for('home')
