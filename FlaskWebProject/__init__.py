@@ -13,7 +13,7 @@ app.config.from_object(Config)
 # TODO: Add any logging levels and handlers with app.logger
 
 streamHandler = logging.StreamHandler()
-streamHandler.setFormatter(logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s'))
+streamHandler.setFormatter(logging.Formatter('%(levelname)s - %(message)s'))
 app.logger.addHandler(streamHandler)
 app.logger.setLevel(logging.INFO)
 
